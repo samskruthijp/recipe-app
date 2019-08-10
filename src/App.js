@@ -37,6 +37,7 @@ const App = ()=> {
         <input className="searchbar" value={search} type="text" onChange={updateSearch} />
         <button className="searchbutton" type="submit">search</button>
       </form>
+      <div className="recipess">
       {recs.map(rec=>(
         <Recipe 
           key={rec.recipe.label} 
@@ -46,6 +47,7 @@ const App = ()=> {
           ingredients={rec.recipe.ingredients}
            />
       ))}
+      </div>
     </div>
   );
 };
